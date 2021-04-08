@@ -3,8 +3,10 @@ package com.instana;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
+@RestController
 public class DemoInstanaApplication {
 
 	public static void main(String[] args) {
@@ -18,11 +20,11 @@ public class DemoInstanaApplication {
 	}
 	
 	
-	@RequestMapping("/error")
-	public String getInstanaError() throws Exception {
-		
-		int x =10/0;
-		
-		return "Instana api executed..!!";
-	}
+	/*
+	 * @RequestMapping("/error") public String getInstanaError() throws Exception {
+	 * 
+	 * int x =10/0;
+	 * 
+	 * return "Instana api executed..!!"; }
+	 */
 }
